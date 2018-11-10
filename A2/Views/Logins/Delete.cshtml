@@ -1,0 +1,33 @@
+﻿@model A2.Models.Login
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Login</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LoginNameNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LoginNameNavigation.StudentId)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="LoginName" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
